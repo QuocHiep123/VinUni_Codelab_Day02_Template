@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720">
+  <style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:30px;font-weight:bold}.box{fill:#fff;stroke:#2962a3;stroke-width:3}.hot{fill:#fff0f0;stroke:#cf3f3f;stroke-width:3}.small{font-size:18px}.head{font-size:22px;font-weight:bold}.time{font-size:17px;fill:#516072}.arrow{stroke:#516072;stroke-width:4;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#516072"/></marker></defs>
+  <text x="60" y="60" class="title">Xanh SM — Current-State Workflow: xử lý sự cố pin thực địa</text>
+  <text x="60" y="98" class="small">Tổng thời gian baseline: 15 phút/lượt · 🔴 bottleneck · 🔄 handoff</text>
+  <rect x="60" y="180" width="250" height="260" rx="16" class="box"/><text x="85" y="225" class="head">1. Nhận cuộc gọi</text><text x="85" y="265" class="small">Dispatcher tạo log</text><text x="85" y="300" class="small">In: biển số, mức pin</text><text x="85" y="335" class="small">🔄 Tài xế → điều phối</text><text x="85" y="395" class="time">⏱ 2 phút</text>
+  <line x1="315" y1="310" x2="365" y2="310" class="arrow"/>
+  <rect x="370" y="180" width="250" height="260" rx="16" class="box"/><text x="395" y="225" class="head">2. Xác thực GPS</text><text x="395" y="265" class="small">Mở bản đồ nội bộ</text><text x="395" y="300" class="small">Out: tọa độ xe</text><text x="395" y="395" class="time">⏱ 2 phút</text>
+  <line x1="625" y1="310" x2="675" y2="310" class="arrow"/>
+  <rect x="680" y="180" width="270" height="260" rx="16" class="hot"/><text x="705" y="225" class="head">3. Tra trạm sạc 🔴</text><text x="705" y="265" class="small">Dashboard: trụ trống,</text><text x="705" y="295" class="small">connector, khoảng cách</text><text x="705" y="395" class="time">⏱ 5 phút</text>
+  <line x1="955" y1="310" x2="1005" y2="310" class="arrow"/>
+  <rect x="1010" y="180" width="270" height="260" rx="16" class="hot"/><text x="1035" y="225" class="head">4. Soạn chỉ dẫn 🔴</text><text x="1035" y="265" class="small">Viết SMS/App thủ công</text><text x="1035" y="300" class="small">Out: hướng dẫn tài xế</text><text x="1035" y="395" class="time">⏱ 5 phút</text>
+  <line x1="1285" y1="310" x2="1335" y2="310" class="arrow"/>
+  <rect x="1340" y="180" width="220" height="260" rx="16" class="box"/><text x="1365" y="225" class="head">5. Cứu hộ</text><text x="1365" y="265" class="small">Nếu pin nguy cấp</text><text x="1365" y="300" class="small">🔄 Điều phối →</text><text x="1365" y="330" class="small">đội cứu hộ</text><text x="1365" y="395" class="time">⏱ 1 phút</text>
+  <text x="60" y="550" class="head">Rủi ro chính</text><text x="60" y="590" class="small">Tra cứu thủ công có thể chọn trạm/cổng không phù hợp; khi pin &lt;5%, hướng dẫn trạm xa là không an toàn.</text><text x="60" y="640" class="small">Future state: Rule kiểm tra pin/khoảng cách → LLM chỉ tạo [DRAFT_ONLY] → Dispatcher duyệt → gửi hoặc fallback làm tay.</text>
+</svg>
