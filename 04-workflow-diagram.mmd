@@ -1,0 +1,20 @@
+flowchart LR
+    A["1. Tài xế báo sự cố<br/>2 phút"]
+    B["2. Xác minh xe & pin<br/>2 phút"]
+    C["3. Xác minh GPS<br/>2 phút"]
+    D["4. Tra phương án hỗ trợ<br/>4 phút<br/>BOTTLENECK"]
+    E["5. Soạn hướng dẫn<br/>4 phút<br/>BOTTLENECK"]
+    F["6. Duyệt & chuyển xử lý<br/>1 phút"]
+
+    A -->|"Handoff: tài xế → dispatcher"| B
+    B --> C
+    C --> D
+    D --> E
+    E -->|"Handoff: dispatcher → tài xế/đội hỗ trợ"| F
+
+    classDef normal fill:#E8F3FF,stroke:#1967D2,color:#12365A,stroke-width:2px;
+    classDef bottleneck fill:#FDE8E7,stroke:#C5221F,color:#7A1714,stroke-width:3px;
+    classDef approval fill:#E6F4EA,stroke:#188038,color:#0D5223,stroke-width:2px;
+    class A,B,C normal;
+    class D,E bottleneck;
+    class F approval;
