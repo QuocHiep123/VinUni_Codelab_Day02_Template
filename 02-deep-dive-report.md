@@ -1,5 +1,15 @@
 # 02 — Deep-Dive Report: Xanh SM Battery Incident Safety Co-pilot
 
+## Thành viên nhóm
+
+| Họ và tên | Mã sinh viên |
+|---|---|
+| Đặng Quốc Hiệp | 2A202602755 |
+| Nguyễn Hoàng Lê Nguyên | 2A202602472 |
+| Giang Thế Vũ | 2A202602478 |
+| Đỗ Mạnh Đoan | 2A202602839 |
+| Nguyễn Mạnh Cường | 2A202602823 |
+
 ## 1. Executive Summary
 
 Khi tài xế Xanh SM báo pin thấp, dispatcher phải thu thập thông tin xe, kiểm tra GPS, tra dữ liệu trạm và soạn hướng dẫn. **Battery Incident Safety Co-pilot** dùng rule để xử lý ranh giới cứng và Gemini 2.5 Flash để tạo bản nháp tiếng Việt. Dispatcher luôn là người kiểm tra và phê duyệt.
