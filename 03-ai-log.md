@@ -1,5 +1,15 @@
 # 03 — AI Log & Reflection
 
+## Thành viên nhóm
+
+| Họ và tên | Mã sinh viên |
+|---|---|
+| Đặng Quốc Hiệp | 2A202602755 |
+| Nguyễn Hoàng Lê Nguyên | 2A202602472 |
+| Giang Thế Vũ | 2A202602478 |
+| Đỗ Mạnh Đoan | 2A202602839 |
+| Nguyễn Mạnh Cường | 2A202602823 |
+
 **Project:** Xanh SM Battery Incident Safety Co-pilot
 
 **Model used for prototype:** Gemini 2.5 Flash

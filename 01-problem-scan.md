@@ -1,5 +1,15 @@
 # 01 — Problem Scan & Quick Assessment
 
+## Thành viên nhóm
+
+| Họ và tên | Mã sinh viên |
+|---|---|
+| Đặng Quốc Hiệp | 2A202602755 |
+| Nguyễn Hoàng Lê Nguyên | 2A202602472 |
+| Giang Thế Vũ | 2A202602478 |
+| Đỗ Mạnh Đoan | 2A202602839 |
+| Nguyễn Mạnh Cường | 2A202602823 |
+
 **Bài toán được chọn:** Xanh SM Battery Incident Safety Co-pilot
 **Bối cảnh pilot:** Trung tâm điều vận Xanh SM, phạm vi sự cố pin xe taxi điện.
 
