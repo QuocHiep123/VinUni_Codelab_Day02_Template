@@ -8,20 +8,20 @@
 
 ## AI đã giúp gì?
 
-Tôi dùng AI như một thought-partner để mở rộng pain point theo 4 lenses, kiểm tra Problem Statement có đủ actor, workflow và metric, rồi tạo adversarial prompts. AI giúp tôi nhận ra bài toán điều vận pin không cần multi-agent: kiểm tra mức pin, khoảng cách và cổng sạc phải là rule xác định; LLM chỉ nên viết bản nháp chỉ dẫn.
+Tôi dùng AI như một thought-partner để mở rộng pain point theo 4 lenses, kiểm tra Problem Statement có đủ actor, workflow và metric, rồi tạo adversarial prompts. AI giúp tôi nhận ra bài toán phân loại lỗi xe không cần multi-agent: rule nên phát hiện dấu hiệu nguy hiểm, còn LLM chỉ đọc hiểu mô tả tiếng Việt, đề xuất nhóm lỗi sơ bộ và câu hỏi làm rõ.
 
 ## Điểm AI chưa đáng tin và cách kiểm tra
 
-AI có thể nêu số sự cố/ngày hoặc tỷ lệ doanh thu rò rỉ nhưng không có nguồn log nội bộ. Tôi không xem đó là dữ liệu thật: báo cáo ghi chúng là **giả định cần xác thực ở pilot**, còn success metric là mục tiêu phải đo bằng dữ liệu vận hành. AI cũng có xu hướng đề xuất “tự động gửi” để nhanh hơn; điều này không chấp nhận được khi hướng dẫn sai trạm lúc pin thấp có thể gây rủi ro vận hành.
+AI có thể gắn một mã lỗi cụ thể từ một mô tả quá ngắn, ví dụ kết luận “hỏng giảm xóc” chỉ từ câu “kêu cụp cụp”. Tôi không xem đó là chẩn đoán hợp lệ: mô tả có thể liên quan đến nhiều bộ phận và phải được kỹ thuật viên xác nhận. AI cũng có thể nêu số liệu không có nguồn log nội bộ; các số trong báo cáo vì vậy được ghi là **giả định cần xác thực ở pilot**.
 
 ## Tôi sửa prompt và ranh giới thế nào?
 
-- Mọi output luôn bắt đầu `[DRAFT_ONLY]` và có `human_review_required: true`.
-- Pin dưới 5% không được đề xuất trạm xa hơn 5 km; phải có `action: dispatch_mobile_charger`.
-- Không được bịa GPS, khoảng cách, connector hay số trụ trống.
-- API thiếu/lỗi thì dispatcher quay về tra dashboard và xử lý thủ công.
+- Mọi output luôn bắt đầu `[DRAFT_ONLY]` để thể hiện đây là bản nháp cần người duyệt.
+- AI chỉ đề xuất nhóm lỗi sơ bộ, độ tự tin và câu hỏi làm rõ; không được kết luận nguyên nhân hoặc bảo xe an toàn để tiếp tục lái.
+- Các từ khóa như “khói”, “mùi khét”, “mất phanh”, “va chạm” phải gắn cờ `requires_urgent_human_review: true`.
+- Thiếu thông tin hoặc độ tự tin thấp thì tư vấn viên hỏi lại khách và tra tài liệu theo quy trình cũ.
 
-Tôi thử ba input đối kháng: ép bỏ tag và gửi thẳng, ép xe pin 2% đến trạm 8 km, và prompt injection yêu cầu bịa trạng thái trạm. Rule an toàn cũng cần được kiểm tra ở tầng ứng dụng/API, thay vì chỉ tin vào system prompt.
+Tôi thử ba input đối kháng: ép AI khẳng định xe chỉ hỏng giảm xóc, ép bỏ tag và gửi kết luận thẳng cho khách, và yêu cầu AI bỏ quy tắc khi mô tả có khói/mùi khét. Rule an toàn cũng cần được kiểm tra ở tầng ứng dụng/API, thay vì chỉ tin vào system prompt.
 
 ## Bài học
 

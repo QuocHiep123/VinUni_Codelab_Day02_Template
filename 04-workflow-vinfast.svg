@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760">
+<style>text{font-family:Arial,sans-serif;fill:#172033}.t{font-size:28px;font-weight:bold}.h{font-size:20px;font-weight:bold}.b{font-size:16px}.n{font-size:16px;fill:#516072}.box{fill:#fff;stroke:#2962a3;stroke-width:3}.hot{fill:#fff1f1;stroke:#cf3f3f;stroke-width:3}.a{stroke:#516072;stroke-width:4;marker-end:url(#m)}</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0L0,6L9,3z" fill="#516072"/></marker></defs>
+<text x="55" y="55" class="t">VinFast Care — Current-State Workflow: phân loại lỗi từ mô tả tiếng Việt</text><text x="55" y="88" class="b">Tổng baseline: 8 phút/ticket · 🔴 bottleneck · 🔄 handoff</text>
+<rect x="45" y="170" width="320" height="280" rx="15" class="box"/><text x="70" y="215" class="h">1. Nhận ticket</text><text x="70" y="255" class="b">Mô tả tự do, dòng xe,</text><text x="70" y="280" class="b">biển số qua app/cuộc gọi</text><text x="70" y="320" class="b">🔄 Khách → VinFast Care</text><text x="70" y="410" class="n">⏱ 1 phút</text>
+<line x1="370" y1="310" x2="425" y2="310" class="a"/>
+<rect x="430" y="170" width="330" height="280" rx="15" class="hot"/><text x="455" y="215" class="h">2. Đọc &amp; hỏi làm rõ 🔴</text><text x="455" y="255" class="b">Vị trí, âm thanh, điều kiện</text><text x="455" y="280" class="b">xuất hiện, cảnh báo xe</text><text x="455" y="410" class="n">⏱ 3 phút</text>
+<line x1="765" y1="310" x2="820" y2="310" class="a"/>
+<rect x="825" y="170" width="330" height="280" rx="15" class="hot"/><text x="850" y="215" class="h">3. Tra nhóm mã lỗi 🔴</text><text x="850" y="255" class="b">Tra tài liệu kỹ thuật và</text><text x="850" y="280" class="b">chọn nhóm lỗi sơ bộ</text><text x="850" y="410" class="n">⏱ 3 phút</text>
+<line x1="1160" y1="310" x2="1215" y2="310" class="a"/>
+<rect x="1220" y="170" width="335" height="280" rx="15" class="box"/><text x="1245" y="215" class="h">4. Tóm tắt &amp; chuyển ticket</text><text x="1245" y="255" class="b">Gửi nhóm lỗi sơ bộ và</text><text x="1245" y="280" class="b">triệu chứng cho kỹ thuật viên</text><text x="1245" y="320" class="b">🔄 Care → kỹ thuật viên</text><text x="1245" y="410" class="n">⏱ 1 phút</text>
+<text x="55" y="550" class="h">Vì sao cần AI?</text><text x="55" y="585" class="b">Khách mô tả bằng ngôn ngữ không chuẩn kỹ thuật; nhân viên phải mất thời gian hiểu, hỏi lại và ánh xạ vào đúng nhóm mã lỗi.</text>
+<text x="55" y="650" class="h">Ranh giới vận hành</text><text x="55" y="685" class="b">AI chỉ đề xuất nhóm lỗi sơ bộ/câu hỏi làm rõ. Không chẩn đoán, không báo giá, không hướng dẫn lái tiếp; dấu hiệu nguy hiểm phải chuyển người xử lý.</text>
+</svg>
